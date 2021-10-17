@@ -31,7 +31,7 @@
 >實地：許琇喬
 
 ***
-## 甘特圖
+## 甘特圖：
 ![fig](gentt.png "gentt")
-## PERT/CPM圖
+## PERT/CPM圖：
 ![fig](cpm.jpg "cpm")
