@@ -88,6 +88,14 @@
 ## DFD_0：
 ![fig](DFD_0.jpg "DFD_0")
 
+## UML：
+![fig](UML.png "UML")
+
+## 循序&活動圖：
+![fig](循序活動1.png "循序活動1")
+![fig](循序活動2.png "循序活動2")
+![fig](循序活動3.png "循序活動3")
+
 ## 甘特圖：
 ![fig](gentt.png "gentt")
 ## PERT/CPM圖：
