@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">What To Eat</string>
+    <string name="acc">帳號：</string>
+    <string name="pass">密碼：</string>
+    <string name="login">登入</string>
+    <string name="visitor">訪客登入</string>
+    <string name="register">註冊</string>
+    <string name="findpass">忘記密碼</string>
 
 
     <string name="large_text">

@@ -33,19 +33,19 @@
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
                 android:gravity="center"
-                android:text="帳號："
+                android:text="@string/acc"
                 android:textColor="@color/text_bright"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editText_account"
+                android:id="@+id/edt_account"
                 android:layout_width="200dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:background="@color/small_frame"
                 android:gravity="center_vertical"
-                android:hint="Please enter the account"
-                android:textSize="15dp" />
+                android:hint="@string/please_enter_the_account"
+                android:textSize="15sp"/>
 
         </LinearLayout>
 
@@ -61,19 +61,19 @@
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
                 android:gravity="center"
-                android:text="密碼："
+                android:text="@string/pass"
                 android:textColor="@color/text_bright"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editText_password"
+                android:id="@+id/edt_password"
                 android:layout_width="200dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:background="@color/small_frame"
                 android:gravity="center_vertical"
-                android:hint="Please enter the password"
-                android:textSize="15dp" />
+                android:hint="@string/please_enter_the_password"
+                android:textSize="15sp"/>
 
         </LinearLayout>
 
@@ -84,33 +84,35 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button_login"
+                android:id="@+id/btn_login"
                 android:layout_width="30dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="15dp"
                 android:layout_weight="1"
                 android:background="@color/small_frame"
                 android:gravity="center"
                 android:onClick="loginButton"
-                android:text="登入"
+                android:text="@string/login"
                 android:textColor="@color/text_dark"
-                android:textSize="15dp" />
+                android:textSize="15sp"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
-                android:id="@+id/button_visitor"
+                android:id="@+id/btn_visitor"
                 android:layout_width="30dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="40dp"
                 android:layout_marginBottom="15dp"
                 android:layout_weight="1"
                 android:background="@color/small_frame"
                 android:gravity="center"
-                android:text="訪客登入"
+                android:text="@string/visitor"
                 android:textColor="@color/text_dark"
-                android:textSize="15dp" />
+                android:textSize="15sp"
+                style="?android:attr/buttonBarButtonStyle" />
         </LinearLayout>
 
         <LinearLayout
@@ -120,67 +122,73 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button_register"
+                android:id="@+id/btn_register"
                 android:layout_width="30dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="20dp"
                 android:layout_weight="1"
                 android:background="@color/small_frame"
                 android:gravity="center"
-                android:text="註冊"
+                android:text="@string/register"
                 android:textColor="@color/text_dark"
-                android:textSize="15dp" />
+                android:textSize="15sp"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
-                android:id="@+id/button_findpass"
+                android:id="@+id/btn_findpass"
                 android:layout_width="30dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="40dp"
                 android:layout_weight="1"
                 android:background="@color/small_frame"
                 android:gravity="center"
-                android:text="忘記密碼"
+                android:text="@string/findpass"
                 android:textColor="@color/text_dark"
-                android:textSize="15dp" />
+                android:textSize="15sp"
+                style="?android:attr/buttonBarButtonStyle" />
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button_byGoogle"
+
+    <ImageButton
+        android:id="@+id/imgBtn_GoogleIn"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/btn_google"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="604dp"
+        android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/btn_google"/>
 
-    <Button
-        android:id="@+id/button_byLine"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/btn_line"
-        app:layout_constraintStart_toEndOf="@+id/button_byGoogle"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <Button
-        android:id="@+id/button_byFB"
+    <ImageButton
+        android:id="@+id/imgBtn_LineIn"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="28dp"
-        android:background="@drawable/btn_fb"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="604dp"
+
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/btn_line" />
+
+    <ImageButton
+        android:id="@+id/imgBtn_FacebookIn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="604dp"
+        android:layout_marginEnd="10dp"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/btn_fb" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
