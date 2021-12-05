@@ -158,36 +158,38 @@
         android:id="@+id/imgBtn_GoogleIn"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="604dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="55dp"
+        android:background="@null"
         android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/btn_google"/>
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/btn_google" />
 
     <ImageButton
         android:id="@+id/imgBtn_LineIn"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="604dp"
-
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="28dp"
+        android:background="@null"
         android:scaleType="fitCenter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgBtn_FacebookIn"
+        app:layout_constraintStart_toEndOf="@+id/imgBtn_GoogleIn"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:srcCompat="@drawable/btn_line" />
 
     <ImageButton
         android:id="@+id/imgBtn_FacebookIn"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="604dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="28dp"
+        android:background="@null"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.98"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:srcCompat="@drawable/btn_fb" />
 
 
