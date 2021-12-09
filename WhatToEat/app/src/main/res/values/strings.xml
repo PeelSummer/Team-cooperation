@@ -14,6 +14,8 @@
     <string name="sendDestination">請輸入電子信箱/手機</string>
     <string name="illustrate">請輸入先前設定的電子信箱或手機號碼，系統將寄送電子郵件或簡訊。</string>
 
+    <string name="person_file">person_file</string>
+    <string name="reorder">reorder</string>
 
 </resources>
 
