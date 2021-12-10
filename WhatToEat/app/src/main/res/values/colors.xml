@@ -11,4 +11,10 @@
     <color name="center_frame">#eaad90</color>
     <color name="text_dark">#69322f</color>
     <color name="text_bright">#f9ecd9</color>
+
+    <color name="title">#69322f</color>
+    <color name="background">#c28074</color>
+    <color name="lock">#bab1a2</color>
+
+
 </resources>
