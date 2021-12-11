@@ -54,7 +54,8 @@
                 android:layout_marginBottom="10dp"
                 android:background="@color/lock"
                 android:text="Abc1234"
-                android:textSize="24dp" />
+                android:textSize="24dp"
+                android:textColor="@color/text_dark"/>
 
         </LinearLayout>
 
@@ -82,7 +83,8 @@
                 android:layout_marginBottom="10dp"
                 android:background="@color/small_frame"
                 android:text="0987654321"
-                android:textSize="24dp" />
+                android:textSize="24dp"
+                android:textColor="@color/text_dark"/>
         </LinearLayout>
 
         <LinearLayout
@@ -109,7 +111,8 @@
                 android:layout_marginBottom="10dp"
                 android:background="@color/small_frame"
                 android:text="Abc1234@gmail.com"
-                android:textSize="24dp" />
+                android:textSize="24dp"
+                android:textColor="@color/text_dark"/>
         </LinearLayout>
 
         <LinearLayout

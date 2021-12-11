@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
                 FindPassDialog();
                 break;
         }
-
     }
     public void FindPassDialog() {
         DialogFragment newFragment = new FindPassDialogFragment();
