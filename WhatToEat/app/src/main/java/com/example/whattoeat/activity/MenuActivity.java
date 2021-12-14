@@ -1,4 +1,4 @@
-package com.example.whattoeat;
+package com.example.whattoeat.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import androidx.constraintlayout.widget.ConstraintLayout.LayoutParams;
 import android.graphics.drawable.Drawable;
+
+import com.example.whattoeat.R;
 
 public class MenuActivity extends AppCompatActivity {
     private Drawable drawable;

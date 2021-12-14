@@ -1,4 +1,4 @@
-package com.example.whattoeat;
+package com.example.whattoeat.dialog;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 
 import androidx.fragment.app.DialogFragment;
+
+import com.example.whattoeat.R;
 
 public class LoginDialogFragment extends DialogFragment {
     @Override

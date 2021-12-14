@@ -5,21 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/b1"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="354dp"
         android:layout_height="274dp"
-        android:background="@color/center_frame"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:background="@drawable/roundrectangle_fp_style"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.602"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintVertical_bias="0.602">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,18 +34,18 @@
                 android:layout_margin="20dp"
                 android:gravity="center"
                 android:text="@string/acc"
-                android:textColor="@color/text_bright"
-                android:textSize="15sp" />
+                android:textColor="@color/beige"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/edt_account"
-                android:layout_width="200dp"
+                android:layout_width="223dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
-                android:background="@color/small_frame"
+                android:background="@drawable/roundrectangle_b_style"
                 android:gravity="center_vertical"
                 android:hint="@string/please_enter_the_account"
-                android:textSize="15sp"/>
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -62,57 +62,57 @@
                 android:layout_margin="20dp"
                 android:gravity="center"
                 android:text="@string/pass"
-                android:textColor="@color/text_bright"
-                android:textSize="15sp" />
+                android:textColor="@color/beige"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/edt_password"
-                android:layout_width="200dp"
+                android:layout_width="222dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
-                android:background="@color/small_frame"
+                android:background="@drawable/roundrectangle_b_style"
                 android:gravity="center_vertical"
                 android:hint="@string/please_enter_the_password"
-                android:textSize="15sp"/>
+                android:textSize="18sp" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="400dp"
+            android:layout_width="399dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btn_login"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="30dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="40dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="15dp"
                 android:layout_weight="1"
-                android:background="@color/small_frame"
+                android:background="@drawable/roundrectangle_b_style"
                 android:gravity="center"
                 android:onClick="loginButton"
                 android:text="@string/login"
-                android:textColor="@color/text_dark"
-                android:textSize="15sp"
-                style="?android:attr/buttonBarButtonStyle" />
+                android:textColor="@color/dark_red"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btn_visitor"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="30dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="40dp"
                 android:layout_marginBottom="15dp"
                 android:layout_weight="1"
-                android:background="@color/small_frame"
+                android:background="@drawable/roundrectangle_b_style"
                 android:gravity="center"
                 android:text="@string/visitor"
-                android:textColor="@color/text_dark"
-                android:textSize="15sp"
-                style="?android:attr/buttonBarButtonStyle" />
+                android:textColor="@color/dark_red"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -123,33 +123,33 @@
 
             <Button
                 android:id="@+id/btn_register"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="30dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="40dp"
                 android:layout_marginEnd="20dp"
                 android:layout_weight="1"
-                android:background="@color/small_frame"
+                android:background="@drawable/roundrectangle_b_style"
                 android:gravity="center"
                 android:onClick="RegisterButton"
                 android:text="@string/register"
-                android:textColor="@color/text_dark"
-                android:textSize="15sp"
-                style="?android:attr/buttonBarButtonStyle" />
+                android:textColor="@color/dark_red"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btn_findpass"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="30dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="40dp"
                 android:layout_weight="1"
-                android:background="@color/small_frame"
+                android:background="@drawable/roundrectangle_b_style"
                 android:gravity="center"
                 android:onClick="FindButton"
                 android:text="@string/findpass"
-                android:textColor="@color/text_dark"
-                android:textSize="15sp"
-                style="?android:attr/buttonBarButtonStyle" />
+                android:textColor="@color/dark_red"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -158,8 +158,8 @@
 
     <ImageButton
         android:id="@+id/imgBtn_GoogleIn"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="55dp"
         android:background="@null"
@@ -170,8 +170,8 @@
 
     <ImageButton
         android:id="@+id/imgBtn_LineIn"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginStart="27dp"
         android:layout_marginTop="55dp"
         android:layout_marginEnd="28dp"
@@ -184,8 +184,8 @@
 
     <ImageButton
         android:id="@+id/imgBtn_FacebookIn"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginTop="55dp"
         android:layout_marginEnd="28dp"
         android:background="@null"

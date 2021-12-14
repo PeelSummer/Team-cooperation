@@ -1,8 +1,10 @@
-package com.example.whattoeat;
+package com.example.whattoeat.activity;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.whattoeat.R;
 
 public class EvaluationActivity extends AppCompatActivity {
     @Override
