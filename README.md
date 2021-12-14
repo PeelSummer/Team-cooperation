@@ -165,6 +165,8 @@
 
 ***
 
+## 實體關係圖：
+![fig](ERD.png "ERD")
 ## 甘特圖：
 ![fig](gantt.png "gantt")
 ## PERT/CPM圖：
