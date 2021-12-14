@@ -94,7 +94,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/roundrectangle_b_style"
                 android:gravity="center"
-                android:onClick="loginButton"
+                android:onClick="eventListener"
                 android:text="@string/login"
                 android:textColor="@color/dark_red"
                 android:textSize="20sp" />
@@ -110,6 +110,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/roundrectangle_b_style"
                 android:gravity="center"
+                android:onClick="eventListener"
                 android:text="@string/visitor"
                 android:textColor="@color/dark_red"
                 android:textSize="20sp" />
@@ -131,7 +132,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/roundrectangle_b_style"
                 android:gravity="center"
-                android:onClick="RegisterButton"
+                android:onClick="eventListener"
                 android:text="@string/register"
                 android:textColor="@color/dark_red"
                 android:textSize="20sp" />
@@ -146,7 +147,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/roundrectangle_b_style"
                 android:gravity="center"
-                android:onClick="FindButton"
+                android:onClick="eventListener"
                 android:text="@string/findpass"
                 android:textColor="@color/dark_red"
                 android:textSize="20sp" />
@@ -163,10 +164,12 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="55dp"
         android:background="@null"
+        android:onClick="eventListener"
         android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:srcCompat="@drawable/btn_google" />
+        app:srcCompat="@drawable/btn_google"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/imgBtn_LineIn"
@@ -176,11 +179,13 @@
         android:layout_marginTop="55dp"
         android:layout_marginEnd="28dp"
         android:background="@null"
+        android:onClick="eventListener"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toStartOf="@+id/imgBtn_FacebookIn"
         app:layout_constraintStart_toEndOf="@+id/imgBtn_GoogleIn"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:srcCompat="@drawable/btn_line" />
+        app:srcCompat="@drawable/btn_line"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/imgBtn_FacebookIn"
@@ -189,10 +194,12 @@
         android:layout_marginTop="55dp"
         android:layout_marginEnd="28dp"
         android:background="@null"
+        android:onClick="eventListener"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:srcCompat="@drawable/btn_fb" />
+        app:srcCompat="@drawable/btn_fb"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

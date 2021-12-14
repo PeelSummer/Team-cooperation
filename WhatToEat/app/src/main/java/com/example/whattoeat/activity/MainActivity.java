@@ -19,28 +19,48 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    //菜單
-    public void loginButton(View view) {
+    public void eventListener(View view){
+        switch (view.getId()){
+            case R.id.btn_login:    //會員登入
+                //拿取資料
+                gotoMenu();
+                break;
+            case R.id.btn_visitor:  //訪客進入
+                gotoMenu();
+                break;
+            case R.id.btn_register: //註冊頁面
+                gotoRegister();
+                break;
+            case R.id.btn_findpass: //忘記密碼
+                FindPassDialog();
+                break;
+            case R.id.imgBtn_GoogleIn: //Google登入
+                gotoMenu();
+                break;
+            case R.id.imgBtn_LineIn: //Google登入
+                gotoMenu();
+                break;
+            case R.id.imgBtn_FacebookIn: //Google登入
+                gotoMenu();
+                break;
+            default:
+                break;
+        }
+    }
+
+    //前往菜單
+    public void gotoMenu(){
         Intent intentMenu = new Intent(this, MenuActivity.class);
         startActivity(intentMenu);
     }
 
-    //註冊
-    public void RegisterButton(View view) {
+    //前往註冊
+    public void gotoRegister(){
         Intent intentRegister = new Intent(this, RegisterActivity.class);
         startActivity(intentRegister);
     }
 
-
-
-    //忘記密碼
-    public void FindButton(View view) {
-        switch (view.getId()){
-            case R.id.btn_findpass:
-                FindPassDialog();
-                break;
-        }
-    }
+    //忘記密碼彈跳視窗
     public void FindPassDialog() {
         DialogFragment newFragment = new FindPassDialogFragment();
         newFragment.show(getSupportFragmentManager(), "list");
