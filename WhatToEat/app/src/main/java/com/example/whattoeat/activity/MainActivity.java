@@ -12,24 +12,22 @@ import com.example.whattoeat.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText edt_account;
-    private EditText edt_password;
+    private EditText account;
+    private EditText password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        edt_account = findViewById(R.id.edt_account);
-        edt_password = findViewById(R.id.edt_password);
+        account = findViewById(R.id.edt_account);
+        password = findViewById(R.id.edt_password);
     }
 
     public void eventListener(View view){
         switch (view.getId()){
             case R.id.btn_login:    //會員登入
                 //比對帳戶是否存在
-                System.out.println("Dialog : account = " + edt_account.getText().toString());
-                System.out.println("Dialog : password = " + edt_password.getText().toString());
                 checkAccount();
                 break;
             case R.id.btn_visitor:  //訪客進入
@@ -53,11 +51,12 @@ public class MainActivity extends AppCompatActivity {
 
     //檢查登入帳號密碼
     public void checkAccount(){
-        if( edt_account.getText().toString().equals("") || edt_password.getText().toString().equals("")){
+        if( account.getText().toString().equals("") || password.getText().toString().equals("")){
             Toast.makeText(this,"請確實填寫帳號密碼",Toast.LENGTH_LONG).show();
         }else{
             if(true){
                 gotoNextActivity(MenuActivity.class);
+                Toast.makeText(getApplicationContext(),"登入成功!",Toast.LENGTH_LONG).show();
             }else{
                 Toast.makeText(this,"帳號或密碼不正確，請重新輸入",Toast.LENGTH_LONG).show();
             }
@@ -87,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(loginSuccess){
             gotoNextActivity(MenuActivity.class);
+            Toast.makeText(getApplicationContext(),"登入成功!",Toast.LENGTH_LONG).show();
         }else{
             Toast.makeText(this,"登入失敗",Toast.LENGTH_LONG).show();
         }
