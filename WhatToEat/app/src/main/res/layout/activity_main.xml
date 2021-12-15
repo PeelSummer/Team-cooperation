@@ -28,24 +28,26 @@
 
             <TextView
                 android:id="@+id/textView1"
-                android:layout_width="70dp"
-                android:layout_height="30dp"
+                android:layout_width="82dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
                 android:gravity="center"
                 android:text="@string/acc"
                 android:textColor="@color/beige"
-                android:textSize="20sp" />
+                android:textSize="24sp" />
 
             <EditText
                 android:id="@+id/edt_account"
-                android:layout_width="223dp"
+                android:layout_width="220dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:background="@drawable/roundrectangle_b_style"
-                android:gravity="center_vertical"
+                android:gravity="center"
                 android:hint="@string/please_enter_the_account"
-                android:textSize="18sp" />
+                android:textColor="@color/dark_red"
+                android:textColorHint="@color/dark_red"
+                android:textSize="18sp"/>
 
         </LinearLayout>
 
@@ -56,23 +58,25 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="70dp"
-                android:layout_height="30dp"
+                android:layout_width="84dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
                 android:gravity="center"
                 android:text="@string/pass"
                 android:textColor="@color/beige"
-                android:textSize="20sp" />
+                android:textSize="24sp" />
 
             <EditText
                 android:id="@+id/edt_password"
-                android:layout_width="222dp"
+                android:layout_width="220dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:background="@drawable/roundrectangle_b_style"
-                android:gravity="center_vertical"
+                android:gravity="center"
                 android:hint="@string/please_enter_the_password"
+                android:textColor="@color/dark_red"
+                android:textColorHint="@color/dark_red"
                 android:textSize="18sp" />
 
         </LinearLayout>
@@ -85,14 +89,13 @@
 
             <Button
                 android:id="@+id/btn_login"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="30dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="15dp"
                 android:layout_weight="1"
-                android:background="@drawable/roundrectangle_b_style"
+                android:background="@drawable/beige_btn_style"
                 android:gravity="center"
                 android:onClick="eventListener"
                 android:text="@string/login"
@@ -101,14 +104,13 @@
 
             <Button
                 android:id="@+id/btn_visitor"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="30dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="40dp"
                 android:layout_marginBottom="15dp"
                 android:layout_weight="1"
-                android:background="@drawable/roundrectangle_b_style"
+                android:background="@drawable/beige_btn_style"
                 android:gravity="center"
                 android:onClick="eventListener"
                 android:text="@string/visitor"
@@ -124,13 +126,12 @@
 
             <Button
                 android:id="@+id/btn_register"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="30dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:layout_marginEnd="20dp"
                 android:layout_weight="1"
-                android:background="@drawable/roundrectangle_b_style"
+                android:background="@drawable/beige_btn_style"
                 android:gravity="center"
                 android:onClick="eventListener"
                 android:text="@string/register"
@@ -139,13 +140,12 @@
 
             <Button
                 android:id="@+id/btn_findpass"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="30dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="40dp"
                 android:layout_weight="1"
-                android:background="@drawable/roundrectangle_b_style"
+                android:background="@drawable/beige_btn_style"
                 android:gravity="center"
                 android:onClick="eventListener"
                 android:text="@string/findpass"
@@ -200,6 +200,5 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:srcCompat="@drawable/btn_fb"
         tools:ignore="SpeakableTextPresentCheck" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
