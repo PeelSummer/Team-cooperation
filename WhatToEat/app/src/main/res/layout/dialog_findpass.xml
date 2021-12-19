@@ -1,53 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@color/small_frame">
+    android:layout_width="250dp"
+    android:layout_height="250dp"
+    android:background="@color/beige"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
 
     <EditText
-        android:id="@+id/t1"
+        android:id="@+id/tv_findpassTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/title"
-        android:textColor="@color/white"
-        android:text="@string/t1"
+        android:background="@color/dark_red"
         android:gravity="center"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:text="@string/t1"
+        android:textColor="@color/beige" />
 
 
     <EditText
         android:id="@+id/edt_sendDestination"
-        android:layout_width="match_parent"
+        android:layout_width="225dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/roundrectangle_w_style"
         android:hint="@string/sendDestination"
         android:minHeight="48dp"
-        android:background="@color/white"
-        android:textColor="@color/small_frame"/>
+        android:textColor="@color/dark_red"
+        android:textColorHint="@color/dark_red" />
 
     <TextView
-        android:id="@+id/t2"
-        android:layout_width="match_parent"
+        android:id="@+id/tv_prompt"
+        android:layout_width="225dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="5dp"
-        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:hint="@string/illustrate"
         android:minHeight="48dp"
-        android:textColor="@color/text_dark"/>
+        android:textColorHint="@color/dark_pink" />
+
     <Button
         android:id="@+id/btn_sendPassword"
-        android:layout_width="250dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="@string/btn_sendPassword"
-        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/white"/>
+        android:background="@drawable/white_btn_style"
+        android:text="@string/btn_sendPassword"
+        android:textColor="@color/dark_red"
+        android:textSize="18sp" />
 
 </LinearLayout>
