@@ -127,7 +127,7 @@ public class MenuActivity extends AppCompatActivity {
         });
 
         //Google登入
-        btn_forgetPassword.setOnClickListener(new View.OnClickListener() {
+        imgBtn_GoogleIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 externalLogin(v);
@@ -135,7 +135,7 @@ public class MenuActivity extends AppCompatActivity {
         });
 
         //Line登入
-        btn_forgetPassword.setOnClickListener(new View.OnClickListener() {
+        imgBtn_LineIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 externalLogin(v);
@@ -143,7 +143,7 @@ public class MenuActivity extends AppCompatActivity {
         });
 
         //Facebook登入
-        btn_forgetPassword.setOnClickListener(new View.OnClickListener() {
+        imgBtn_FacebookIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 externalLogin(v);
