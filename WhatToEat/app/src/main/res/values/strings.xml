@@ -18,7 +18,28 @@
     <string name="person_file">person_file</string>
     <string name="reorder">reorder</string>
 
-
+    <string name="noodle">麵食</string>
+    <string name="rice">飯類</string>
+    <string name="vegetarian">素食</string>
+    <string name="western">中式</string>
+    <string name="chinese">西式</string>
+    <string name="fried_food">炸物</string>
+    <string name="dessert">甜點</string>
+    <string name="dried">乾</string>
+    <string name="soup">湯</string>
+    <string name="airconditioner">冷氣</string>
+    <string name="motorcycle">機車停車位</string>
+    <string name="car">汽車停車位</string>
+    <string name="toilet">廁所</string>
+    <string name="drink">免費飲料</string>
+    <string name="internal">內用</string>
+    <string name="delivery">外送</string>
+    <string name="reservation">電話預訂</string>
+    <string name="price_range">價格範圍</string>
+    <string name="random_sort">隨機排序</string>
+    <string name="default_sort">預設排序</string>
+    <string name="price_sort">價格排序</string>
+    <string name="evaluation_sort">評價遞減</string>
 
 </resources>
 
