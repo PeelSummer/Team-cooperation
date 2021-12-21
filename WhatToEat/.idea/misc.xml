@@ -27,6 +27,7 @@
         <entry key="..\:/Program/Android Studio/Team-cooperation/WhatToEat/app/src/main/res/drawable/ic_person.xml" value="0.26979166666666665" />
         <entry key="..\:/Program/Android Studio/Team-cooperation/WhatToEat/app/src/main/res/drawable/ic_reorder.xml" value="0.26979166666666665" />
         <entry key="..\:/Program/Android Studio/Team-cooperation/WhatToEat/app/src/main/res/drawable/linear_style.xml" value="0.26979166666666665" />
+        <entry key="..\:/Program/Android Studio/Team-cooperation/WhatToEat/app/src/main/res/drawable/round_white_btn_style.xml" value="0.15462962962962962" />
         <entry key="..\:/Program/Android Studio/Team-cooperation/WhatToEat/app/src/main/res/drawable/roundedRectangle_fleshPink_style.xml" value="0.26979166666666665" />
         <entry key="..\:/Program/Android Studio/Team-cooperation/WhatToEat/app/src/main/res/drawable/roundrectangle_b_style.xml" value="0.26979166666666665" />
         <entry key="..\:/Program/Android Studio/Team-cooperation/WhatToEat/app/src/main/res/drawable/roundrectangle_d_style.xml" value="0.26979166666666665" />
@@ -37,7 +38,7 @@
         <entry key="..\:/Program/Android Studio/Team-cooperation/WhatToEat/app/src/main/res/layout/activity_file.xml" value="0.25364583333333335" />
         <entry key="..\:/Program/Android Studio/Team-cooperation/WhatToEat/app/src/main/res/layout/activity_history.xml" value="0.25364583333333335" />
         <entry key="..\:/Program/Android Studio/Team-cooperation/WhatToEat/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Program/Android Studio/Team-cooperation/WhatToEat/app/src/main/res/layout/activity_menu.xml" value="0.24547101449275363" />
+        <entry key="..\:/Program/Android Studio/Team-cooperation/WhatToEat/app/src/main/res/layout/activity_menu.xml" value="0.20989583333333334" />
         <entry key="..\:/Program/Android Studio/Team-cooperation/WhatToEat/app/src/main/res/layout/activity_register.xml" value="0.25364583333333335" />
         <entry key="..\:/Program/Android Studio/Team-cooperation/WhatToEat/app/src/main/res/layout/dialog_findpass.xml" value="0.6" />
         <entry key="..\:/Program/Android Studio/Team-cooperation/WhatToEat/app/src/main/res/layout/dialog_login.xml" value="0.25364583333333335" />
