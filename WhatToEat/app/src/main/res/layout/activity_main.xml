@@ -72,6 +72,7 @@
                 android:layout_width="220dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
+                android:inputType="numberPassword"
                 android:background="@drawable/roundrectangle_b_style"
                 android:gravity="center"
                 android:hint="@string/please_enter_the_password"

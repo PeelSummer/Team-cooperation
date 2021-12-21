@@ -3,13 +3,13 @@
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/small_frame">
+    android:background="@color/beige">
 
     <EditText
         android:id="@+id/t1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/title"
+        android:background="@color/dark_red"
         android:gravity="center"
         android:minHeight="48dp"
         android:text="@string/t2"
@@ -29,7 +29,7 @@
             android:layout_margin="20dp"
             android:gravity="center"
             android:text="@string/acc"
-            android:textColor="@color/text_dark"
+            android:textColor="@color/dark_red"
             android:textSize="15sp" />
 
         <EditText
@@ -37,11 +37,12 @@
             android:layout_width="220dp"
             android:layout_height="35dp"
             android:layout_gravity="center"
-            android:background="@color/white"
+            android:background="@drawable/roundrectangle_w_style"
             android:gravity="center_vertical"
-            android:text="Abc1234"
+            android:hint="@string/please_enter_the_account"
             android:textSize="15sp"
-            android:textColor="@color/text_dark"/>
+            android:textColorHint="@color/dark_beige"
+            android:textColor="@color/dark_red"/>
 
     </LinearLayout>
     <LinearLayout
@@ -58,7 +59,7 @@
             android:layout_margin="20dp"
             android:gravity="center"
             android:text="@string/pass"
-            android:textColor="@color/text_dark"
+            android:textColor="@color/dark_red"
             android:textSize="15sp" />
 
         <EditText
@@ -66,101 +67,114 @@
             android:layout_width="220dp"
             android:layout_height="35dp"
             android:layout_gravity="center"
-            android:background="@color/white"
+            android:background="@drawable/roundrectangle_w_style"
             android:gravity="center_vertical"
-            android:text="**********"
+            android:inputType="numberPassword"
+            android:hint="@string/please_enter_the_password"
+            android:textColorHint="@color/dark_beige"
             android:textSize="15sp"
-            android:textColor="@color/text_dark"/>
+            android:textColor="@color/dark_red"/>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn_login"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="30dp"
-            android:layout_height="35dp"
 
-            android:layout_marginEnd="10dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:background="@color/white"
+            android:background="@drawable/white_btn_style"
             android:gravity="center"
             android:onClick="loginButton"
             android:text="@string/login"
-            android:textColor="@color/text_dark"
-            android:textSize="15sp"
-            style="?android:attr/buttonBarButtonStyle" />
+            android:textColor="@color/dark_red"
+            android:textSize="15sp" />
 
         <Button
             android:id="@+id/btn_register"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="30dp"
             android:layout_height="35dp"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:background="@color/white"
+            android:background="@drawable/white_btn_style"
             android:gravity="center"
             android:text="@string/register"
-            android:textColor="@color/text_dark"
-            android:textSize="15sp"
-            style="?android:attr/buttonBarButtonStyle" />
+            android:textColor="@color/dark_red"
+            android:textSize="15sp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn_forgetPassword"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="80dp"
             android:layout_height="35dp"
-
             android:layout_weight="1"
-            android:background="@color/white"
+            android:background="@drawable/white_btn_style"
             android:gravity="center"
             android:onClick="FindButton"
             android:text="@string/findpass"
-            android:textColor="@color/text_dark"
-            android:textSize="15sp"
-            style="?android:attr/buttonBarButtonStyle" />
+            android:textColor="@color/dark_red"
+            android:textSize="15sp" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/imgBtn_GoogleIn"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginLeft="25dp"
             android:layout_marginTop="5dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/btn_google"
-            android:scaleType="fitCenter"/>
+            android:scaleType="fitCenter" />
 
         <ImageButton
             android:id="@+id/imgBtn_LineIn"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginLeft="25dp"
             android:layout_marginTop="5dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/btn_line"
-            android:scaleType="fitCenter"/>
+            android:scaleType="fitCenter" />
 
         <ImageButton
             android:id="@+id/imgBtn_FacebookIn"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginLeft="25dp"
             android:layout_marginTop="5dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/btn_fb"
             android:scaleType="fitCenter" />
 

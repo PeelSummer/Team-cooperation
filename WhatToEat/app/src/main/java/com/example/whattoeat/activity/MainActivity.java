@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText account;
     private EditText password;
+    private boolean isLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
         account = findViewById(R.id.edt_account);
         password = findViewById(R.id.edt_password);
+
+        isLogin = false;
     }
 
     public void eventListener(View view){
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 checkAccount();
                 break;
             case R.id.btn_visitor:  //訪客進入
+                isLogin = false;
                 gotoNextActivity(MenuActivity.class);
                 break;
             case R.id.btn_register: //註冊頁面
@@ -57,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this,"請確實填寫帳號密碼",Toast.LENGTH_LONG).show();
         }else{
             if(true){
+                isLogin = true;
                 gotoNextActivity(MenuActivity.class);
                 Toast.makeText(getApplicationContext(),"登入成功!",Toast.LENGTH_LONG).show();
             }else{
@@ -98,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
     //前往下一個畫面
     public void gotoNextActivity(Class nextActiviy){
         Intent intentNext = new Intent(this, nextActiviy);
+        intentNext.putExtra("login_status", isLogin);
         startActivity(intentNext);
     }
 
