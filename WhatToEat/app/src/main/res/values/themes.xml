@@ -4,9 +4,9 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/flesh_pink</item>
         <item name="colorPrimaryVariant">@color/dark_pink</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/beige</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/beige</item>
+        <item name="colorSecondary">@color/dark_red</item>
         <item name="colorSecondaryVariant">@color/flesh_pink</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->

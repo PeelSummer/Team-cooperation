@@ -2,6 +2,7 @@ package com.example.whattoeat.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -21,6 +22,7 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        /*
         //新增Button
         Button myButton = new Button(this);
 
@@ -45,17 +47,23 @@ public class MenuActivity extends AppCompatActivity {
         //最後將用.setCompoundDrawables放進按鈕裡 看是要放在哪邊就照下面那樣 左上右下 要放的塞圖片 不要的直接null
         myButton.setCompoundDrawables(drawable,null,null,null);
         //加入Btn文字
-        myButton.setText("我是按鈕哈哈哈\n鍋燒喔\n又換行\n我愛換行");
+        myButton.setText("我是按鈕哈哈哈\n鍋燒喔\n又換行\n我愛換行");*/
     }
 
     public void eventListener(View view){
         switch (view.getId()){
             case R.id.imgBtn_personalInfo: //個人資料
+                gotoNextActivity(FileActivity.class);
                 break;
             case R.id.imgBtn_conditions: //篩選條件
                 break;
             default:
                 break;
         }
+    }
+
+    public void gotoNextActivity(Class nextActiviy){
+        Intent intentNext = new Intent(this, nextActiviy);
+        startActivity(intentNext);
     }
 }
