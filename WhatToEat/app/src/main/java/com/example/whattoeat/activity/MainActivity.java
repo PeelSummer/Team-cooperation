@@ -1,10 +1,15 @@
 package com.example.whattoeat.activity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 import com.example.whattoeat.dialog.FindPassDialogFragment;
@@ -100,9 +105,32 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //忘記密碼彈跳視窗
-    public void FindPassDialog() {
-        DialogFragment newFragment = new FindPassDialogFragment();
-        newFragment.show(getSupportFragmentManager(), "list");
+    private AlertDialog FindPassDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
+        View view = getLayoutInflater().inflate(R.layout.dialog_findpass,null);
+        builder.setView(view);
+
+        Button btn_sendPassword = view.findViewById(R.id.btn_sendPassword);
+        EditText edt_sendDestination = view.findViewById(R.id.edt_sendDestination);
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+
+        btn_sendPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(edt_sendDestination.getText().toString().equals("")){
+                    Toast.makeText(getApplication(),"請確實填入郵件/手機",Toast.LENGTH_LONG).show();
+                }else{
+                    edt_sendDestination.setText("");
+                    Toast.makeText(getApplication(),"密碼已寄至您的郵件/手機",Toast.LENGTH_LONG).show();
+                    dialog.dismiss();
+                }
+            }
+        });
+        return dialog;
     }
 
 }
