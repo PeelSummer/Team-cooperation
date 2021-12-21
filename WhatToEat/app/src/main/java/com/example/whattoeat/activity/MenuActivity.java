@@ -6,12 +6,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import androidx.constraintlayout.widget.ConstraintLayout.LayoutParams;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import android.graphics.drawable.Drawable;
 import android.widget.Toast;
 
@@ -24,6 +28,8 @@ public class MenuActivity extends AppCompatActivity {
     private Drawable drawable;
     private static boolean isLogin;
 
+    DrawerLayout drawerLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +37,9 @@ public class MenuActivity extends AppCompatActivity {
 
         Intent intent = this.getIntent();
         isLogin = intent.getBooleanExtra("login_status", false);
+
+        drawerLayout = findViewById(R.id.myDrawerLayout);
+        drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
 
         /*
         //新增Button
@@ -70,6 +79,7 @@ public class MenuActivity extends AppCompatActivity {
                 }
                 break;
             case R.id.imgBtn_conditions: //篩選條件
+                drawerLayout.openDrawer(GravityCompat.END);
                 break;
             default:
                 break;
