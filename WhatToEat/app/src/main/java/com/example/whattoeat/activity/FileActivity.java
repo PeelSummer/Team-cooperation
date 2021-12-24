@@ -67,7 +67,6 @@ public class FileActivity extends AppCompatActivity {
                     json.append(line);
                     line = in.readLine();
                 }
-                System.out.println("Print Output : json = " + json.toString());
                 JSONObject jsonObject = new JSONObject(new JSONObject(json.toString()).getString("response"));
 
                 edt_account.setText(jsonObject.getString("name"));
