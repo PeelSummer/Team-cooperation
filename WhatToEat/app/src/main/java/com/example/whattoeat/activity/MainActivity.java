@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         account = findViewById(R.id.edt_account);
         password = findViewById(R.id.edt_password);
 
+
         isLogin = false;
     }
 
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         if( account.getText().toString().equals("") || password.getText().toString().equals("")){
             Toast.makeText(this,"請確實填寫帳號密碼",Toast.LENGTH_LONG).show();
         }else{
-            if(true){
+            if((account.getText().toString().equals("as209099")) && password.getText().toString().equals("11111")){
                 isLogin = true;
                 gotoNextActivity(MenuActivity.class);
                 Toast.makeText(getApplicationContext(),"登入成功!",Toast.LENGTH_LONG).show();
