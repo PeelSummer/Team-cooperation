@@ -63,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
         }else{
             if((account.getText().toString().equals("as209099")) && password.getText().toString().equals("11111")){
                 isLogin = true;
+                account.setText("");
+                password.setText("");
                 gotoNextActivity(MenuActivity.class);
                 Toast.makeText(getApplicationContext(),"登入成功!",Toast.LENGTH_LONG).show();
             }else{
