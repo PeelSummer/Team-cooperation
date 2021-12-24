@@ -25,8 +25,8 @@
     <string name="chinese">西式</string>
     <string name="fried_food">炸物</string>
     <string name="dessert">甜點</string>
-    <string name="dried">乾</string>
-    <string name="soup">湯</string>
+    <string name="dried">乾\　</string>
+    <string name="soup">湯\　</string>
     <string name="airconditioner">冷氣</string>
     <string name="motorcycle">機車停車位</string>
     <string name="car">汽車停車位</string>
