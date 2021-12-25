@@ -62,33 +62,6 @@ public class MenuActivity extends AppCompatActivity {
         drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
 
         catchData();
-
-        /*
-        //新增Button
-        Button myButton = new Button(this);
-
-        //以下是計算視窗寬度的程式碼
-        //定義DisplayMetrics 物件
-        DisplayMetrics dm = new DisplayMetrics();
-        //取得視窗屬性
-        getWindowManager().getDefaultDisplay().getMetrics(dm);
-        //取得視窗的寬度
-        int screenWidth = dm.widthPixels;
-        int screenHeight = dm.heightPixels;
-
-        //這邊是將Button放進LinearLayout
-        LinearLayout linlayout = (LinearLayout)findViewById(R.id.lin_menu);
-        LayoutParams lp = new LayoutParams(screenWidth-50, LayoutParams.WRAP_CONTENT);
-        linlayout.addView(myButton, lp);
-
-        //這邊是設定Button放圖片的相關內容
-        drawable=getResources().getDrawable(R.mipmap.ic_launcher);
-        //要放進Button的圖必須設定大小 否則不會顯示
-        drawable.setBounds(0,0,drawable.getMinimumWidth(),drawable.getMinimumHeight());
-        //最後將用.setCompoundDrawables放進按鈕裡 看是要放在哪邊就照下面那樣 左上右下 要放的塞圖片 不要的直接null
-        myButton.setCompoundDrawables(drawable,null,null,null);
-        //加入Btn文字
-        myButton.setText("我是按鈕哈哈哈\n鍋燒喔\n又換行\n我愛換行");*/
     }
 
     public void eventListener(View view){

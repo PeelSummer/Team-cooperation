@@ -367,8 +367,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btn_btn_sortByRandom"
+            <ToggleButton
+                android:id="@+id/toBtn_sortByRandom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -376,13 +376,13 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/roundrectangle_w_style"
-                android:text="@string/random_sort"
                 android:textColor="@color/dark_red"
+                android:textOff="@string/random_sort"
+                android:textOn="@string/random_sort"
                 android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/btn_sortByDefault"
+            <ToggleButton
+                android:id="@+id/toBtn_sortByDefault"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -390,8 +390,8 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/roundrectangle_w_style"
-                android:text="@string/default_sort"
+                android:textOff="@string/default_sort"
+                android:textOn="@string/default_sort"
                 android:textColor="@color/dark_red"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -401,8 +401,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btn_sortByPrice"
+            <ToggleButton
+                android:id="@+id/toBtn_sortByPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -410,13 +410,13 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/roundrectangle_w_style"
-                android:text="@string/price_sort"
+                android:textOff="@string/price_sort"
+                android:textOn="@string/price_sort"
                 android:textColor="@color/dark_red"
                 android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/btn_sortByEvaluation"
+            <ToggleButton
+                android:id="@+id/toBtn_sortByEvaluation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -424,8 +424,8 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/roundrectangle_w_style"
-                android:text="@string/evaluation_sort"
+                android:textOff="@string/evaluation_sort"
+                android:textOn="@string/evaluation_sort"
                 android:textColor="@color/dark_red"
                 android:textSize="20sp" />
 
