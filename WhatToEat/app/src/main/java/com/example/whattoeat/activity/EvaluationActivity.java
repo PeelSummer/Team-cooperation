@@ -3,7 +3,6 @@ package com.example.whattoeat.activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -18,7 +17,6 @@ public class EvaluationActivity extends AppCompatActivity {
     private Spinner show_name;
     private int star_num = 3;
     private TextView tv_star_num;
-    private EditText edit_evaluation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +24,6 @@ public class EvaluationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_evaluation);
 
         tv_star_num = findViewById(R.id.tv_star);
-        edit_evaluation = findViewById(R.id.edit_evaluation);
-
         show_name = findViewById(R.id.spinner_show_name);
 
         ArrayList arrayList = new ArrayList<Integer>();
@@ -47,7 +43,7 @@ public class EvaluationActivity extends AppCompatActivity {
                 }
                 break;
             case R.id.imgBtn_decrease:
-                if(star_num<5){
+                if(star_num>1){
                     star_num --;
                     tv_star_num.setText(star_num + "★");
                 }
