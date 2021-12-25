@@ -112,7 +112,6 @@ public class FileActivity extends AppCompatActivity {
                     line = in.readLine();
                 }
                 JSONObject jsonObject = new JSONObject(new JSONObject(json.toString()).getString("response"));
-                System.out.println("Print Output : jsonObject = " + jsonObject.getString((historynum - 1 +"")));
                 jsonObject = new JSONObject(new JSONObject(jsonObject.toString()).getString((historynum - 1 +"")));
 
                 tv_shop_name.setText(jsonObject.getString("name"));
