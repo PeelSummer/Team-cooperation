@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/small_frame">
+    android:background="@color/small_frame"
+    android:orientation="vertical">
 
     <EditText
-        android:id="@+id/t1"
+        android:id="@+id/tv_addPreference_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/title"
-        android:textColor="@color/white"
-        android:text="新增偏好"
+        android:background="@color/dark_red"
         android:gravity="center"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:text="新增偏好"
+        android:textColor="@color/white" />
 
 
     <LinearLayout
@@ -21,28 +21,262 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/t2"
-            android:layout_width="69dp"
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp"
-            android:minHeight="48dp"
-            android:text="價格範圍"
-            android:textColor="@color/text_dark" />
+            android:background="@drawable/white_btn_style"
+            android:text="飯類"
+            android:textColor="@color/dark_red"
+            android:textSize="16sp" />
 
         <Button
-            android:id="@+id/btn_sendPassword"
-            android:layout_width="220dp"
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/white_btn_style"
+            android:text="炸物"
+            android:textColor="@color/dark_red"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/white_btn_style"
+            android:text="中式"
+            android:textColor="@color/dark_red"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/white_btn_style"
+            android:text="西式"
+            android:textColor="@color/dark_red"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/white_btn_style"
+            android:text="甜點"
+            android:textColor="@color/dark_red"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/white_btn_style"
+            android:text="素食"
+            android:textColor="@color/dark_red"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/white_btn_style"
+            android:text="乾"
+            android:textColor="@color/dark_red"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/white_btn_style"
+            android:text="湯"
+            android:textColor="@color/dark_red"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/white_btn_style"
+            android:text="冷氣"
+            android:textColor="@color/dark_red"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="2"
+            android:background="@drawable/white_btn_style"
+            android:text="汽車停車位"
+            android:textColor="@color/dark_red"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/white_btn_style"
+            android:text="電話預訂"
+            android:textColor="@color/dark_red"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/white_btn_style"
+            android:text="內用"
+            android:textColor="@color/dark_red"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/white_btn_style"
+            android:text="外送"
+            android:textColor="@color/dark_red"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_price_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:text="@string/price_range"
+            android:textColor="@color/dark_red"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_lowPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:hint="price"
+            android:inputType="textPersonName"
+            android:textColor="@color/dark_red"
+            android:textColorHint="@color/dark_pink"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_sign"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="~"
+            android:textColor="@color/dark_red"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_highPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
             android:background="@color/white"
-            android:text="新增"
-            android:textColor="@color/text_dark" />
+            android:gravity="center"
+            android:hint="price"
+            android:inputType="textPersonName"
+            android:textColor="@color/dark_red"
+            android:textColorHint="@color/dark_pink"
+            android:textSize="16sp" />
     </LinearLayout>
 
 </LinearLayout>

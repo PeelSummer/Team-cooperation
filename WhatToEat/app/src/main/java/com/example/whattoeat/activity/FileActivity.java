@@ -3,10 +3,13 @@ package com.example.whattoeat.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.whattoeat.R;
@@ -48,13 +51,13 @@ public class FileActivity extends AppCompatActivity {
         imv_shop = findViewById(R.id.imv_shop);
 
         catchUserData();
-        catchHistoryData();
+        //catchHistoryData();
     }
 
     public void eventListener(View view){
         switch (view.getId()){
             case R.id.btn_addPreference:
-                System.out.println("Print Output : 點擊新增偏好的按鈕");
+                LoginDialog();
                 break;
             case R.id.btn_viewHistory:
                 Intent intentNext = new Intent(this, HistoryActivity.class);
@@ -62,6 +65,20 @@ public class FileActivity extends AppCompatActivity {
                 break;
         }
     }
+
+    //新增偏好視窗
+    private AlertDialog LoginDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        View view = getLayoutInflater().inflate(R.layout.dialog_preference,null);
+        builder.setView(view);
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        return dialog;
+    }
+
 
     //抓取資料庫資料
     private void catchUserData(){
@@ -96,6 +113,7 @@ public class FileActivity extends AppCompatActivity {
         }).start();
     }
 
+    /*
     private void catchHistoryData(){
         String catchData = "http://beeanddragonhouse.myftp.org:8087/users/as209099/getComments/";
 
@@ -132,5 +150,5 @@ public class FileActivity extends AppCompatActivity {
             }
 
         }).start();
-    }
+    }*/
 }

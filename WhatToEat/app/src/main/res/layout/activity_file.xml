@@ -152,6 +152,68 @@
                 android:textSize="20dp" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/beige_btn_style"
+                    android:text="\ 機車停車位 | X\ "
+                    android:textColor="@color/dark_red"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/beige_btn_style"
+                    android:text="\ 麵食 | X\ "
+                    android:textColor="@color/dark_red"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/beige_btn_style"
+                    android:text="\ 廁所 | X\ "
+                    android:textColor="@color/dark_red"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/beige_btn_style"
+                android:text="\ 免費飲料 | X\ "
+                android:textColor="@color/dark_red"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
         <TextView
             android:id="@+id/tv_passwordCheck"
             android:layout_width="match_parent"
@@ -186,7 +248,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:srcCompat="@drawable/shop2" />
 
             <TextView
                 android:id="@+id/tv_shop_name"
@@ -194,7 +256,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="30dp"
-                android:text="店名"
+                android:text="尚房玉品鍋"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/dark_red"
                 android:textSize="24sp"
@@ -207,7 +269,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="30dp"
-                android:text="日期"
+                android:text="2021-12-15"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/dark_red"
                 android:textSize="24sp"
