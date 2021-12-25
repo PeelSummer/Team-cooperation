@@ -36,6 +36,9 @@
         <activity
             android:name=".activity.EvaluationActivity"
             android:exported="true" />
+        <activity
+            android:name=".activity.HistoryActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

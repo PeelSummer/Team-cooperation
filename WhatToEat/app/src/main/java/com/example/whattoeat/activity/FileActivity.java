@@ -1,5 +1,6 @@
 package com.example.whattoeat.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -46,7 +47,8 @@ public class FileActivity extends AppCompatActivity {
                 System.out.println("Print Output : 點擊新增偏好的按鈕");
                 break;
             case R.id.btn_viewHistory:
-                System.out.println("Print Output : 點擊查看更多歷史資料");
+                Intent intentNext = new Intent(this, HistoryActivity.class);
+                startActivity(intentNext);
                 break;
         }
     }
