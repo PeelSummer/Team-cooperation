@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    tools:context=".activity.EvaluationActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,9 +35,9 @@
                 android:layout_width="110dp"
                 android:layout_height="36dp"
                 android:layout_marginStart="10dp"
-                android:background="@color/small_frame"
+                android:background="@drawable/beige_btn_style"
                 android:text="評價 ↑"
-                android:textColor="@color/text_dark"
+                android:textColor="@color/dark_red"
                 android:textSize="18dp" />
 
             <Button
@@ -43,9 +45,9 @@
                 android:layout_width="110dp"
                 android:layout_height="36dp"
                 android:layout_marginStart="15dp"
-                android:background="@color/small_frame"
+                android:background="@drawable/beige_btn_style"
                 android:text="評價 ↓"
-                android:textColor="@color/text_dark"
+                android:textColor="@color/dark_red"
                 android:textSize="18dp"/>
 
         </LinearLayout>
@@ -63,8 +65,8 @@
                 android:layout_weight="1"
                 android:text="5★"
                 android:layout_marginStart="10dp"
-                android:background="@color/small_frame"
-                android:textColor="@color/text_dark"
+                android:background="@drawable/beige_btn_style"
+                android:textColor="@color/dark_red"
                 android:textSize="18dp"/>
 
             <Button
@@ -74,9 +76,9 @@
                 android:layout_weight="1"
                 android:text="4★"
                 android:layout_marginStart="10dp"
-                android:background="@color/small_frame"
+                android:background="@drawable/beige_btn_style"
 
-                android:textColor="@color/text_dark"
+                android:textColor="@color/dark_red"
                 android:textSize="18dp"/>
 
             <Button
@@ -86,8 +88,8 @@
                 android:layout_weight="1"
                 android:text="3★"
                 android:layout_marginStart="10dp"
-                android:background="@color/small_frame"
-                android:textColor="@color/text_dark"
+                android:background="@drawable/beige_btn_style"
+                android:textColor="@color/dark_red"
                 android:textSize="18dp"/>
 
             <Button
@@ -97,8 +99,8 @@
                 android:layout_weight="1"
                 android:text="2★"
                 android:layout_marginStart="10dp"
-                android:background="@color/small_frame"
-                android:textColor="@color/text_dark"
+                android:background="@drawable/beige_btn_style"
+                android:textColor="@color/dark_red"
                 android:textSize="18dp"/>
 
             <Button
@@ -109,9 +111,289 @@
                 android:text="1★"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="@color/small_frame"
-                android:textColor="@color/text_dark"
+                android:background="@drawable/beige_btn_style"
+                android:textColor="@color/dark_red"
                 android:textSize="18dp"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:id="@+id/linear_evaluation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/beige"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="匿名使用者 ★★★★★"
+                    android:textColor="@color/dark_red"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="皮脆肉軟又有汁，推薦炸魂雞排"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Abc1234 ★★★★"
+                    android:textColor="@color/dark_red"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="現點現炸皮很脆。建議可以先打電話定"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="匿名使用者 ★★★★"
+                    android:textColor="@color/dark_red"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="匿名使用者 ★★★★★"
+                    android:textColor="@color/dark_red"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Robin ★★★"
+                    android:textColor="@color/dark_red"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="雞腿裡面有一點血QQ"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="匿名使用者 ★★"
+                    android:textColor="@color/dark_red"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Lin ★★★★★"
+                    android:textColor="@color/dark_red"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="食材處理道地，回客率高"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="John ★★★★★"
+                    android:textColor="@color/dark_red"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="好吃，會看外送備註單的店家最好了👍"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Lam ★★★★★"
+                    android:textColor="@color/dark_red"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="雞腿排很棒 推推推 喜歡吃比較重口味的可以直接叫個大辣試試看 因為我覺得中辣不太滿足到我🤣🤣🤣🤣🤣"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinner_show_name"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/dark_red"
+                    android:minHeight="48dp" />
+
+                <ImageButton
+                    android:id="@+id/imgBtn_decrease"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#00FFFFFF"
+                    android:onClick="eventListener"
+                    app:srcCompat="@drawable/ic_decrease" />
+
+                <TextView
+                    android:id="@+id/tv_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="3★"
+                    android:textColor="@color/dark_red"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/imgBtn_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#00FFFFFF"
+                    android:onClick="eventListener"
+                    app:srcCompat="@drawable/ic_add" />
+
+                <TextView
+                    android:id="@+id/tv_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:onClick="eventListener"
+                    android:text="送出"
+                    android:textColor="@color/dark_red"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edit_evaluation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:ems="10"
+                android:hint="輸入您的評價"
+                android:inputType="textPersonName"
+                android:textColor="@color/dark_red"
+                android:textColorHint="@color/dark_pink" />
 
         </LinearLayout>
 
