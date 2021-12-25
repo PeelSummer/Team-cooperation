@@ -21,7 +21,7 @@ public class ShopActivity extends AppCompatActivity {
         imgBtn_navigate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri location = Uri.parse("geo:0,0?q=高雄市楠梓區楠梓路188號");
+                Uri location = Uri.parse("geo:0,0?q=炸魂雞排-高雄楠梓店");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
