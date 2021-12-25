@@ -2,7 +2,6 @@ package com.example.whattoeat.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.TestLooperManager;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -27,13 +26,13 @@ public class FileActivity extends AppCompatActivity {
 
     private int historynum = 4;
 
-    EditText edt_account;
-    EditText edt_phone;
-    EditText edt_mail;
+    private EditText edt_account;
+    private EditText edt_phone;
+    private EditText edt_mail;
 
-    TextView tv_shop_name;
-    TextView tv_date;
-    ImageView imv_shop;
+    private TextView tv_shop_name;
+    private TextView tv_date;
+    private ImageView imv_shop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,10 +96,10 @@ public class FileActivity extends AppCompatActivity {
         }).start();
     }
 
-    private void catchHistoryData() {
+    private void catchHistoryData(){
         String catchData = "http://beeanddragonhouse.myftp.org:8087/users/as209099/getComments/";
 
-        new Thread(() -> {
+        new Thread(()->{
             try {
                 URL url = new URL(catchData);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -113,12 +112,13 @@ public class FileActivity extends AppCompatActivity {
                     line = in.readLine();
                 }
                 JSONObject jsonObject = new JSONObject(new JSONObject(json.toString()).getString("response"));
-                JSONObject jsonTemp = new JSONObject(new JSONObject(jsonObject.toString()).getString((historynum - 1 +"")));
+                System.out.println("Print Output : jsonObject = " + jsonObject.getString((historynum - 1 +"")));
+                jsonObject = new JSONObject(new JSONObject(jsonObject.toString()).getString((historynum - 1 +"")));
 
-                tv_shop_name.setText(jsonTemp.getString("name"));
-                tv_date.setText(jsonTemp.getString("date"));
+                tv_shop_name.setText(jsonObject.getString("name"));
+                tv_date.setText(jsonObject.getString("date"));
 
-                int resId = getApplicationContext().getResources().getIdentifier("shop" + jsonTemp.getString("id"), "drawable", getPackageName());
+                int resId = getApplicationContext().getResources().getIdentifier("shop" + jsonObject.getString("id"), "drawable", getPackageName());
                 imv_shop.setImageResource(resId);
 
             } catch (MalformedURLException e) {
