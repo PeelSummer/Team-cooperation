@@ -1,31 +1,51 @@
 package com.example.whattoeat.activity;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import androidx.constraintlayout.widget.ConstraintLayout.LayoutParams;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import android.graphics.drawable.Drawable;
-import android.widget.Toast;
 
 import com.example.whattoeat.R;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class MenuActivity extends AppCompatActivity {
+
+    ArrayList<HashMap<String,String>> arrayList = new ArrayList<>();
 
     private EditText account;
     private EditText password;
-    private Drawable drawable;
     private static boolean isLogin;
+
+    private int shopnum = 30;
 
     DrawerLayout drawerLayout;
 
@@ -39,6 +59,8 @@ public class MenuActivity extends AppCompatActivity {
 
         drawerLayout = findViewById(R.id.myDrawerLayout);
         drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+
+        catchData();
 
         /*
         //新增Button
@@ -205,7 +227,6 @@ public class MenuActivity extends AppCompatActivity {
         return dialog;
     }
 
-
     //外部登入
     public void externalLogin(View view){
         boolean loginSuccess = false;
@@ -235,4 +256,128 @@ public class MenuActivity extends AppCompatActivity {
         }
 
     }
+
+    private void catchData(){
+        String catchData = "http://beeanddragonhouse.myftp.org:8087/shop/getShop";
+        ProgressDialog dialog = ProgressDialog.show(this,"讀取中","請稍候",true);
+
+        new Thread(()->{
+            try {
+                URL url = new URL(catchData);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                InputStream is = connection.getInputStream();
+                BufferedReader in = new BufferedReader(new InputStreamReader(is));
+                String line = in.readLine();
+                StringBuffer json = new StringBuffer();
+                while (line != null) {
+                    json.append(line);
+                    line = in.readLine();
+                }
+                JSONObject jsonObject = new JSONObject(new JSONObject(json.toString()).getString("response"));
+                for (int i =0;i<shopnum;i++){
+                    JSONObject jsonTemp = new JSONObject(new JSONObject(jsonObject.toString()).getString(i+""));
+                    String id = jsonTemp.getString("id");
+                    String name = jsonTemp.getString("name");
+                    String location = jsonTemp.getString("location");
+                    String rice = jsonTemp.getString("rice");
+                    String noodles = jsonTemp.getString("noodles");
+                    String fried = jsonTemp.getString("fried");
+                    String chinese_style = jsonTemp.getString("chinese_style");
+                    String eng_style = jsonTemp.getString("eng_style");
+                    String dessert = jsonTemp.getString("dessert");
+                    String vegetarian = jsonTemp.getString("vegetarian");
+                    String dry_food = jsonTemp.getString("dry_food");
+                    String soup = jsonTemp.getString("soup");
+                    String air_condiction = jsonTemp.getString("air_condiction");
+                    String park_moto = jsonTemp.getString("park_moto");
+                    String park_car = jsonTemp.getString("park_car");
+                    String wc = jsonTemp.getString("wc");
+                    String free_drink = jsonTemp.getString("free_drink");
+                    String phone_reservation = jsonTemp.getString("phone_reservation");
+                    String indoor = jsonTemp.getString("indoor");
+                    String deilvery = jsonTemp.getString("deilvery");
+                    String daily_opentime = jsonTemp.getString("daily_opentime");
+                    String daily_closetime = jsonTemp.getString("daily_closetime");
+                    String price_lowest = jsonTemp.getString("price_lowest");
+                    String price_highest = jsonTemp.getString("price_highest");
+
+
+                    HashMap<String,String> shopMenu = new HashMap<>();
+                    shopMenu.put("name",name);
+                    shopMenu.put("price_lowest",price_lowest);
+                    shopMenu.put("price_highest",price_highest);
+                    shopMenu.put("daily_opentime",daily_opentime);
+                    shopMenu.put("daily_closetime",daily_closetime);
+
+                    arrayList.add(shopMenu);
+
+                    runOnUiThread(()->{
+                        dialog.dismiss();
+                        RecyclerView recyclerView;
+                        MyAdapter myAdapter;
+                        recyclerView = findViewById(R.id.recyclerView);
+                        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+                        recyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
+                        myAdapter = new MyAdapter();
+                        recyclerView.setAdapter(myAdapter);
+                    });
+
+                    /*HashMap<String,String> hashMap = new HashMap<>();
+                    hashMap.put("PlaceName",PlaceName);
+                    hashMap.put("DataDate",DataDate);
+                    hashMap.put("Car",ComplexName);
+                    hashMap.put("Type",Complex2Name);
+                    hashMap.put("Price",Complex3Name);
+
+                    arrayList.add(hashMap);*/
+                }
+            } catch (MalformedURLException e) {
+                System.out.println("Print Output : MalformedURLException = " + e);
+                e.printStackTrace();
+            } catch (IOException e) {
+                System.out.println("Print Output : IOException = " + e);
+                e.printStackTrace();
+            } catch (JSONException e) {
+                System.out.println("Print Output : JSONException = " + e);
+                e.printStackTrace();
+            }
+
+        }).start();
+    }
+
+    private class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
+        public class ViewHolder extends RecyclerView.ViewHolder {
+
+            TextView shop_name, price_range, tv_evaluation, tv_is_open;
+
+            public ViewHolder(@NonNull View itemView) {
+                super(itemView);
+                shop_name = itemView.findViewById(R.id.tv_shop_name);
+                price_range = itemView.findViewById(R.id.tv_price_range);
+                tv_evaluation = itemView.findViewById(R.id.tv_evaluation);
+                tv_is_open = itemView.findViewById(R.id.tv_is_open);
+            }
+        }
+
+        @NonNull
+        @Override
+        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_shop, parent, false);
+            return new ViewHolder(view);
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+            holder.shop_name.setText(arrayList.get(position).get("name"));
+            holder.price_range.setText("$ " + arrayList.get(position).get("price_lowest") + " ~ " + arrayList.get(position).get("price_highest"));
+            holder.tv_evaluation.setText(((int)(Math.random()*21)+30)/10 + "");
+            holder.tv_is_open.setText(arrayList.get(position).get("daily_opentime") + " ~ " + arrayList.get(position).get("daily_closetime"));
+        }
+
+        @Override
+        public int getItemCount() {
+            return arrayList.size();
+        }
+    }
+
 }
