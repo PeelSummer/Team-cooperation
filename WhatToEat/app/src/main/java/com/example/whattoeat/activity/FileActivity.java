@@ -2,8 +2,11 @@ package com.example.whattoeat.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.TestLooperManager;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,15 +22,18 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class FileActivity extends AppCompatActivity {
+
+    private int historynum = 4;
 
     EditText edt_account;
     EditText edt_phone;
     EditText edt_mail;
 
+    TextView tv_shop_name;
+    TextView tv_date;
+    ImageView imv_shop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +44,12 @@ public class FileActivity extends AppCompatActivity {
         edt_phone = findViewById(R.id.edt_phone);
         edt_mail = findViewById(R.id.edt_mail);
 
-        catchData();
+        tv_shop_name = findViewById(R.id.tv_shop_name);
+        tv_date = findViewById(R.id.tv_date);
+        imv_shop = findViewById(R.id.imv_shop);
+
+        catchUserData();
+        catchHistoryData();
     }
 
     public void eventListener(View view){
@@ -54,7 +65,7 @@ public class FileActivity extends AppCompatActivity {
     }
 
     //抓取資料庫資料
-    private void catchData(){
+    private void catchUserData(){
         String catchData = "http://beeanddragonhouse.myftp.org:8087/users/as209099/getInformation/";
 
         new Thread(()->{
@@ -86,4 +97,41 @@ public class FileActivity extends AppCompatActivity {
         }).start();
     }
 
+    private void catchHistoryData() {
+        String catchData = "http://beeanddragonhouse.myftp.org:8087/users/as209099/getComments/";
+
+        new Thread(() -> {
+            try {
+                URL url = new URL(catchData);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                InputStream is = connection.getInputStream();
+                BufferedReader in = new BufferedReader(new InputStreamReader(is));
+                String line = in.readLine();
+                StringBuffer json = new StringBuffer();
+                while (line != null) {
+                    json.append(line);
+                    line = in.readLine();
+                }
+                JSONObject jsonObject = new JSONObject(new JSONObject(json.toString()).getString("response"));
+                JSONObject jsonTemp = new JSONObject(new JSONObject(jsonObject.toString()).getString((historynum - 1 +"")));
+
+                tv_shop_name.setText(jsonTemp.getString("name"));
+                tv_date.setText(jsonTemp.getString("date"));
+
+                int resId = getApplicationContext().getResources().getIdentifier("shop" + jsonTemp.getString("id"), "drawable", getPackageName());
+                imv_shop.setImageResource(resId);
+
+            } catch (MalformedURLException e) {
+                System.out.println("Print Output : MalformedURLException = " + e);
+                e.printStackTrace();
+            } catch (IOException e) {
+                System.out.println("Print Output : IOException = " + e);
+                e.printStackTrace();
+            } catch (JSONException e) {
+                System.out.println("Print Output : JSONException = " + e);
+                e.printStackTrace();
+            }
+
+        }).start();
+    }
 }
