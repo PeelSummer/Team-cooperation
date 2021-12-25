@@ -30,6 +30,9 @@
         <activity
             android:name=".activity.FileActivity"
             android:exported="true" />
+        <activity
+            android:name=".activity.ShopActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

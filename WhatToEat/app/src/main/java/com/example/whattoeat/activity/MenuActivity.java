@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -101,6 +102,9 @@ public class MenuActivity extends AppCompatActivity {
                 break;
             case R.id.imgBtn_conditions: //篩選條件
                 drawerLayout.openDrawer(GravityCompat.END);
+                break;
+            case R.id.btn_shop:
+                gotoNextActivity(ShopActivity.class);
                 break;
             default:
                 break;
@@ -303,6 +307,7 @@ public class MenuActivity extends AppCompatActivity {
 
 
                     HashMap<String,String> shopMenu = new HashMap<>();
+                    shopMenu.put("id",id);
                     shopMenu.put("name",name);
                     shopMenu.put("price_lowest",price_lowest);
                     shopMenu.put("price_highest",price_highest);
@@ -321,15 +326,6 @@ public class MenuActivity extends AppCompatActivity {
                         myAdapter = new MyAdapter();
                         recyclerView.setAdapter(myAdapter);
                     });
-
-                    /*HashMap<String,String> hashMap = new HashMap<>();
-                    hashMap.put("PlaceName",PlaceName);
-                    hashMap.put("DataDate",DataDate);
-                    hashMap.put("Car",ComplexName);
-                    hashMap.put("Type",Complex2Name);
-                    hashMap.put("Price",Complex3Name);
-
-                    arrayList.add(hashMap);*/
                 }
             } catch (MalformedURLException e) {
                 System.out.println("Print Output : MalformedURLException = " + e);
@@ -349,6 +345,7 @@ public class MenuActivity extends AppCompatActivity {
         public class ViewHolder extends RecyclerView.ViewHolder {
 
             TextView shop_name, price_range, tv_evaluation, tv_is_open;
+            ImageView imv_shop;
 
             public ViewHolder(@NonNull View itemView) {
                 super(itemView);
@@ -356,6 +353,7 @@ public class MenuActivity extends AppCompatActivity {
                 price_range = itemView.findViewById(R.id.tv_price_range);
                 tv_evaluation = itemView.findViewById(R.id.tv_evaluation);
                 tv_is_open = itemView.findViewById(R.id.tv_is_open);
+                imv_shop = itemView.findViewById(R.id.imv_shop);
             }
         }
 
@@ -368,16 +366,19 @@ public class MenuActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+            int resId =getApplicationContext().getResources().getIdentifier("shop"+arrayList.get(position).get("id"),"drawable",getPackageName());
             holder.shop_name.setText(arrayList.get(position).get("name"));
-            holder.price_range.setText("$ " + arrayList.get(position).get("price_lowest") + " ~ " + arrayList.get(position).get("price_highest"));
-            holder.tv_evaluation.setText(((int)(Math.random()*21)+30)/10 + "");
+            holder.price_range.setText(arrayList.get(position).get("price_lowest") + " ~ " + arrayList.get(position).get("price_highest"));
+            holder.tv_evaluation.setText(((int)(Math.random()*21)+30)/10.0 + "");
             holder.tv_is_open.setText(arrayList.get(position).get("daily_opentime") + " ~ " + arrayList.get(position).get("daily_closetime"));
+            holder.imv_shop.setImageResource(resId);
         }
 
         @Override
         public int getItemCount() {
             return arrayList.size();
         }
+
     }
 
 }
