@@ -10,7 +10,7 @@
 |組員 | C108118250 | 林悅如 | 文書 |
 
 ***
-## 題目：[等下吃什麼](https://docs.google.com/presentation/d/1oi8Gjl6MIHE4Hg6rnl9_qNno82cL2_CB/edit?usp=sharing&ouid=109712475882388543240&rtpof=true&sd=true)
+## 題目：[等下吃什麼](https://docs.google.com/presentation/d/1Urhozc9EbVI8TJAZ37kPR8bq7OQnUEdd/edit#slide=id.p1)
 ### 內容：
 >每到用餐時間是否都因煩惱著要吃什麼而感到痛苦呢...
 >
